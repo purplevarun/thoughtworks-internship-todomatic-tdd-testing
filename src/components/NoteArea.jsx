@@ -1,7 +1,7 @@
 import React from "react";
 
 const NoteArea = () => {
-	return <div></div>;
+	return <div className="note-area"></div>;
 };
 
 export default NoteArea;

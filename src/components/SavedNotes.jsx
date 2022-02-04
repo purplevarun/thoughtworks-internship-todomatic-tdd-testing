@@ -1,7 +1,7 @@
 import React from "react";
 
 const SavedNotes = () => {
-	return <div></div>;
+	return <div className="saved-notes"></div>;
 };
 
 export default SavedNotes;
