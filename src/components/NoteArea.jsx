@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./NoteArea.css";
+import allNotes from "./Global";
 const NoteArea = ({ testNote }) => {
 	const [newNote, setNewNote] = useState("");
 	const [notesCollection, SetNotesCollection] = useState([]);
@@ -11,9 +12,9 @@ const NoteArea = ({ testNote }) => {
 	});
 	const saveTheNewNote = () => {
 		if (newNote.length > 0) {
-			SetNotesCollection([...notesCollection, newNote]);
+			// SetNotesCollection([...notesCollection, newNote]);
+			allNotes = [...allNotes, newNote];
 		}
-		localStorage.setItem("NOTES", notesCollection);
 	};
 	return (
 		<div className="note-area">

@@ -1,7 +1,9 @@
 .saved-notes {
-	display: flex;
+	display: block;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 	width: 100%;
 	height: 50%;
+	flex-wrap: wrap;
+	text-align: center;
 }
