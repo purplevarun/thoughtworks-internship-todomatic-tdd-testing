@@ -1,9 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./NoteArea.css";
-import allNotes from "./Global";
-const NoteArea = ({ testNote }) => {
+
+const NoteArea = ({ testNote, allNotes, setAllNotes }) => {
 	const [newNote, setNewNote] = useState("");
-	const [notesCollection, SetNotesCollection] = useState([]);
 	const textArea = useRef(null);
 	useEffect(() => {
 		if (testNote) {
@@ -11,10 +10,7 @@ const NoteArea = ({ testNote }) => {
 		}
 	});
 	const saveTheNewNote = () => {
-		if (newNote.length > 0) {
-			// SetNotesCollection([...notesCollection, newNote]);
-			allNotes = [...allNotes, newNote];
-		}
+		if (newNote.length > 0) setAllNotes([...allNotes, newNote]);
 	};
 	return (
 		<div className="note-area">

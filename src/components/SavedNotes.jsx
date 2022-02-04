@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./SavedNotes.css";
-import allNotes from "./Global";
+
 const SavedNotes = () => {
 	const [DISPLAY, setDISPLAY] = useState("block");
 	return (
@@ -10,9 +10,6 @@ const SavedNotes = () => {
 			<button className="btn btn-sm btn-danger" onClick={() => {}}>
 				Clear All Notes
 			</button>
-			{allNotes.forEach((note) => {
-				return <li>{note}</li>;
-			})}
 		</div>
 	);
 };

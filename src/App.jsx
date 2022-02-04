@@ -2,12 +2,14 @@ import "./bootstrap.min.css";
 import "./App.css";
 import NoteArea from "./components/NoteArea";
 import SavedNotes from "./components/SavedNotes";
+import { useState } from "react";
 function App() {
+	const [allNotes, setAllNotes] = useState([]);
 	return (
 		<div className="App">
-			<NoteArea />
+			<NoteArea allNotes={allNotes} setAllNotes={setAllNotes} />
 			<div className="gap"></div>
-			<SavedNotes />
+			<SavedNotes allNotes={allNotes} setAllNotes={setAllNotes} />
 		</div>
 	);
 }
