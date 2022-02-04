@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./NoteArea.css";
-const NoteArea = () => {
+const NoteArea = ({ testNote }) => {
+	const [newNote, setNewNote] = useState("");
 	return (
 		<div className="note-area">
 			<textarea
@@ -8,9 +9,9 @@ const NoteArea = () => {
 				id=""
 				cols="40"
 				rows="10"
+				// value={testNote ? testNote : ""}
+				onChange={(e) => setNewNote(e.target.value)}
 			></textarea>
-
-			{/* <div className="gapht"></div> */}
 
 			<button
 				className="btn btn-lg btn-warning submitbtn"
