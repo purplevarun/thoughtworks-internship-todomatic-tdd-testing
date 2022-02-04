@@ -11,6 +11,7 @@ const NoteArea = ({ testNote, allNotes, setAllNotes }) => {
 	});
 	const saveTheNewNote = () => {
 		if (newNote.length > 0) setAllNotes([...allNotes, newNote]);
+		textArea.current.value = "";
 	};
 	return (
 		<div className="note-area">
