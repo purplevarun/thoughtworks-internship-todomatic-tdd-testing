@@ -1,16 +1,15 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
-
+import NoteArea from "./components/NoteArea";
+import SavedNotes from "./components/SavedNotes";
 function App() {
 	const [value, setValue] = useState(0);
 	return (
 		<div className="App">
-			<button data-testid="clickbtn" onClick={() => setValue(value + 1)}>
-				click me
-			</button>
-			<div style={{ width: "100%" }}></div>
-			<h1 data-testid="valdiv">{value}</h1>
+			<NoteArea />
+			<div className="gap"></div>
+			<SavedNotes />
 		</div>
 	);
 }
