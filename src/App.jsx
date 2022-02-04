@@ -3,7 +3,6 @@ import "./App.css";
 import NoteArea from "./components/NoteArea";
 import SavedNotes from "./components/SavedNotes";
 import { useEffect, useState } from "react";
-import axios from "axios";
 function App() {
 	const [allNotes, setAllNotes] = useState([]);
 	return (

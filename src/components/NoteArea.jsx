@@ -27,6 +27,9 @@ const NoteArea = ({ allNotes, setAllNotes }) => {
 			>
 				Save this Note
 			</button>
+			<p style={{ display: "none" }} data-testid="compareNewNotes">
+				{JSON.stringify(allNotes)}
+			</p>
 		</div>
 	);
 };

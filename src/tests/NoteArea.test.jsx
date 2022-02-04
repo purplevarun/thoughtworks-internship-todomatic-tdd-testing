@@ -1,6 +1,5 @@
 import "@testing-library/jest-dom/extend-expect";
 import { fireEvent, render } from "@testing-library/react";
-import { useState } from "react";
 import NoteArea from "../components/NoteArea";
 
 var allNotes = [];
@@ -8,7 +7,7 @@ const setAllNotes = (newNotes) => {
 	allNotes = newNotes;
 };
 
-describe("text area tests", () => {
+describe("checking text area functionality", () => {
 	it("should be empty initially", () => {
 		const noteArea = render(<NoteArea />);
 		const textArea = noteArea.getByTestId("notebox");
