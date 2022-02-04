@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import "./bootstrap.min.css";
 import "./App.css";
 import { useState } from "react";
 import NoteArea from "./components/NoteArea";
