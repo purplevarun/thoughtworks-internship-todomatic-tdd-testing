@@ -1,0 +1,4 @@
+#!/bin/bash
+cmd=$@
+git add .
+git commit -am "$cmd"
