@@ -1,14 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./NoteArea.css";
 
-const NoteArea = ({ testNote, allNotes, setAllNotes }) => {
+const NoteArea = ({ allNotes, setAllNotes }) => {
 	const [newNote, setNewNote] = useState("");
 	const textArea = useRef(null);
-	useEffect(() => {
-		if (testNote) {
-			textArea.current.innerHTML = "hello world";
-		}
-	});
+
 	const saveTheNewNote = () => {
 		if (newNote.length > 0) setAllNotes([...allNotes, newNote]);
 		textArea.current.value = "";
