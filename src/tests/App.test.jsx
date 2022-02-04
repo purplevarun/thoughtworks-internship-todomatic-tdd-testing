@@ -1,10 +1,15 @@
 import { fireEvent, render } from "@testing-library/react";
-import { click } from "@testing-library/user-event/dist/click";
 import React from "react";
 import App from "../App";
+import "@testing-library/jest-dom/extend-expect";
+
 describe("app has todoapp component or not", () => {
 	it("should have a div", () => {
-		const app = render(<App />).getByTestId("clickbtn");
-		fireEvent.click(app);
+		const app = render(<App />);
+		const btn = app.getByTestId("clickbtn");
+		const val = app.getByTestId("valdiv");
+		expect(val).toHaveTextContent(0);
+		fireEvent.click(btn);
+		expect(val).toHaveTextContent(1);
 	});
 });

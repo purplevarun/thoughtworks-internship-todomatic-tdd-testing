@@ -10,7 +10,7 @@ function App() {
 				click me
 			</button>
 			<div style={{ width: "100%" }}></div>
-			<h1>{value}</h1>
+			<h1 data-testid="valdiv">{value}</h1>
 		</div>
 	);
 }
