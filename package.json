@@ -1,6 +1,6 @@
 {
 	"name": "todomatic-tdd",
-	"homepage": "https://purplevarun.github.io/thoughtworks-internship-todomatic-tdd/",
+	"homepage": "https://purplevarun.github.io/thoughtworks-internship-todomatic-tdd-testing/",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
