@@ -9,6 +9,6 @@ describe("text area tests", () => {
 		expect(textArea).toHaveTextContent("");
 	});
 	it("should change it's value on text input", () => {
-		const noteArea = render(<NoteArea />);
+		const noteArea = render(<NoteArea testNote={"hello world"} />);
 	});
 });
